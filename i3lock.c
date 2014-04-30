@@ -589,12 +589,14 @@ int main(int argc, char *argv[]) {
             char* arg = strdup(optarg);
             DEBUG("found failure command. '%s' \n", arg);
             strncpy(fail_command, arg, 512);
+            free(arg);
             break;
         }
         case 's':{
             char* arg = strdup(optarg);
             DEBUG("found success command. '%s' \n", arg);
             strncpy(success_command, arg, 512);
+            free(arg);
             break;
         }
         case 0:
